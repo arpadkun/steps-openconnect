@@ -10,6 +10,7 @@
 
 
 set -e
+set -x
 
 check_existence() {
     if [ "x$1" = "x" ]; then
@@ -17,6 +18,8 @@ check_existence() {
         exit 1
     fi
 }
+
+echo "Cisco Firepower VPN step starting... "
 
 check_existence "$OPENCONNECT_VPN_TERMINATOR" "OPENCONNECT_VPN_TERMINATOR"
 check_existence "$OPENCONNECT_USER" "OPENCONNECT_USER"
