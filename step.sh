@@ -30,4 +30,4 @@ if [ $? -ne 0 ]; then
     brew install openconnect
 fi
 
-echo $OPENCONNECT_PASSWORD | sudo openconnect $OPENCONNECT_VPN_TERMINATOR --user=$OPENCONNECT_USER --passwd-on-stdin --servercert $OPENCONNECT_SERVERCERT
+echo $OPENCONNECT_PASSWORD | sudo openconnect $OPENCONNECT_VPN_TERMINATOR --user=$OPENCONNECT_USER --passwd-on-stdin --servercert $OPENCONNECT_SERVERCERT &
