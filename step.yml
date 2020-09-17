@@ -1,0 +1,12 @@
+title: "Bitrise Step to connect to Cisco Firepower VPN Terminator with Openconnect"
+summary: "Bitrise Step to connect to Cisco Firepower VPN Terminator with Openconnect"
+description: "Bitrise Step to connect to Cisco Firepower VPN Terminator with Openconnect"
+website: https://github.com/arpadkun/steps-openconnect
+source_code_url: https://github.com/arpadkun/steps-openconnect
+support_url: https://github.com/arpadkun/steps-openconnect/issues
+
+type_tags:
+  - utility
+
+is_always_run: false
+is_skippable: false
