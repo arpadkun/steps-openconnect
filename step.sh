@@ -7,11 +7,6 @@
 #   - OPENCONNECT_PASSWORD env var with VPN password
 #   - OPENCONNECT_SERVERCERT env var with VPN fingerprint hash (like: pin-sha256:xyz1234....)
 
-
-
-set -e
-set -x
-
 check_existence() {
     if [ "x$1" = "x" ]; then
         echo "ERROR: required \$$2 environment variable is missing or empty, exiting"
