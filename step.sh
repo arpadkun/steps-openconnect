@@ -25,7 +25,11 @@ check_existence "$OPENCONNECT_SERVERCERT" "OPENCONNECT_SERVERCERT"
 openconnect --version &>/dev/null
 if [ $? -ne 0 ]; then
     echo "Openconnect is not installed, calling brew to install it..."
-    brew install openconnect
+    if [ $(uname -s) = "Linux" ]; then
+      apt-get update && apt-get -y install openconnect
+    else
+      brew install openconnect
+    fi
 fi
 
 echo $OPENCONNECT_PASSWORD | sudo openconnect $OPENCONNECT_VPN_TERMINATOR --user=$OPENCONNECT_USER --passwd-on-stdin --servercert $OPENCONNECT_SERVERCERT &
